@@ -1,0 +1,1 @@
+declare namespace Cloudflare {interface Env {DB?:D1Database; BUCKET?:R2Bucket; STAFF_EMAIL?:string; STAFF_PASSWORD_HASH?:string; SESSION_SECRET?:string;}}

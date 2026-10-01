@@ -1,0 +1,5 @@
+/menus/*
+  Content-Type: application/pdf
+  Content-Disposition: attachment
+  X-Content-Type-Options: nosniff
+  Content-Security-Policy: sandbox; default-src 'none'
