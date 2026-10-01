@@ -1,6 +1,6 @@
 # Fields Café
 
-Private-review redesign of Fields Café, with a separate Little Fields page, current PDF downloads, ResDiary booking embed and authenticated staff menu management.
+Second private-review, luxury editorial redesign of Fields Café, with a separate Little Fields page, current PDF downloads, ResDiary booking embed and authenticated staff menu management.
 
 ## Develop
 
@@ -38,6 +38,6 @@ The downloadable café menu is the supplied May 2026 v6 PDF. Catering is the own
 
 Main café address/hours and bookings follow the current official Fields site. Little Fields hours come from supplied branch materials and await final owner confirmation. Instagram retains the live site's `@fieldscafe_albany`; supplied menu materials list a different handle. The existing email destination is `info@fieldscafe.co.nz` while the live site displays `hello@fieldscafe.co.nz`; this review uses a consistently labelled `info@` action pending owner confirmation. No email submissions or bookings were sent.
 
-Photography is authentic supplied imagery, with selected web-sized WebP derivatives. No objects, dishes or spaces were generated or changed. Original photography, logo PDFs, internal reviews and source archives are retained outside the checkout. Public release still needs rights/currentness confirmation, particularly historic venue photography. Logo SVG paths are cleanly exported from the supplied green vector master; no desktop-only webfonts are embedded. System Arial/Georgia are used.
+Photography uses actual image-generation edits of supplied original photographs, encoded as web-sized WebP derivatives without upscaling. Original-resolution source files and source-to-edit provenance remain outside the checkout. The 20 café-photo edited masters are approximately 1024–1536 px, not full original resolution; the three proposed-development renders retain their supplied output sizes up to 1775 px. Sixteen café sources came from supplied Drive originals and four supplemental sources from the official website. All 23 deployed WebPs match the approved final processed package byte-for-byte. Edits aim to preserve dishes, buildings and branch identity; generative fine details can differ, so final rights/currentness and fidelity review remains important before public launch. Little Fields imagery is used only in that branch context. Livana renders are explicitly labelled proposed-development artist impressions with AI-enhanced presentation; they are not completed café facilities. Logo SVG paths are cleanly exported from the supplied Fields vector master. Cormorant Garamond and Montserrat webfont subsets are self-hosted with SIL OFL licenses; no desktop-only licensed fonts are embedded.
 
 Do not switch the production domain or change the private review audience without owner approval. Review metadata is `noindex` until launch approval.

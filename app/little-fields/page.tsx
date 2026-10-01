@@ -1,67 +1,98 @@
+export const metadata = { title: "Little Fields | Fields Café" };
+import { photos } from "@/lib/editorial-assets";
 export default function Little() {
   return (
     <>
       <section className="little-hero">
         <img
-          src="/assets/little.webp"
-          alt="Little Fields kiosk and its dark timber counter at 6 Munroe Lane"
+          src={photos.little}
+          alt="Little Fields café kiosk inside the Auckland Council building at 6 Munroe Lane"
         />
         <div>
-          <p className="eyebrow">6 MUNROE LANE · ALBANY</p>
+          <p className="eyebrow">LITTLE FIELDS · 6 MUNROE LANE</p>
           <h1>
-            A little
+            A little pause.
             <br />
-            Fields in
-            <br />
-            your <i>day.</i>
+            <i>A better day.</i>
           </h1>
         </div>
       </section>
-      <section className="story section">
+      <section className="story-chapter section">
+        <p className="section-index">OUR SMALLER NEIGHBOURHOOD RITUAL</p>
         <h2>
-          Your everyday
+          Good things,
           <br />
-          coffee stop.
+          <i>in a little space.</i>
         </h2>
         <div>
           <p>
-            Meet Little Fields, our distinct café kiosk inside the Auckland
-            Council building at 6 Munroe Lane, Albany. A familiar neighbourhood
-            welcome, in a smaller setting.
+            Inside the Auckland Council building at 6 Munroe Lane, Little Fields
+            brings a familiar neighbourhood spirit to your weekday.
           </p>
           <p>
-            Drop by for coffee and a little pause in your weekday. For a full
-            café visit and table bookings, find Fields at 4 Appian Way.
+            A distinct café kiosk, with its own place in the rhythm of Albany.
+            Drop by for coffee and a pause before carrying on with your day.
           </p>
           <a
-            className="button dark"
+            className="text-link"
             href="https://www.google.com/maps/search/?api=1&query=Little+Fields+6+Munroe+Lane+Albany"
           >
             Find Little Fields
           </a>
         </div>
       </section>
-      <section className="little-promo section">
-        <img
-          src="/assets/coffee.webp"
-          alt="The espresso machine at Little Fields"
-          loading="lazy"
-        />
+      <div className="little-photo-story">
+        <figure>
+          <img
+            src={photos.littleInterior}
+            alt="The counter and seating detail at Little Fields"
+            loading="lazy"
+          />
+        </figure>
+        <figure>
+          <img
+            src={photos.littlePastry}
+            alt="A Little Fields pastry, topped with cream and edible flowers"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+      <section className="little-details section">
+        <figure>
+          <img
+            src={photos.littleDetail}
+            alt="Coffee and detail at the Little Fields branch"
+            loading="lazy"
+          />
+        </figure>
         <div>
-          <p className="eyebrow">SMALL RITUALS. GOOD DAYS.</p>
+          <p className="eyebrow">A WEEKDAY KIND OF PLEASURE</p>
           <h2>
-            Coffee,
+            Meet you
             <br />
-            then carry on.
+            <i>at Little Fields.</i>
           </h2>
           <p>
             Inside the Auckland Council building
             <br />6 Munroe Lane, Albany
           </p>
+          <dl>
+            <div>
+              <dt>Monday — Friday</dt>
+              <dd>7:30am — 1:30pm</dd>
+            </div>
+            <div>
+              <dt>Saturday — Sunday</dt>
+              <dd>Closed</dd>
+            </div>
+          </dl>
           <p className="small">
-            Monday — Friday · 7:30am — 1:30pm. Closed weekends. Please confirm
-            current hours before making a special trip.
+            Please confirm current hours before making a special trip.
           </p>
+          <p>Looking for our full café and table bookings?</p>
+          <a className="text-link" href="/booking">
+            Visit Fields at 4 Appian Way
+          </a>
         </div>
       </section>
     </>

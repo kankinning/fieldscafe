@@ -1,163 +1,266 @@
 import { Entrance } from "./entrance";
+import { EditorialGallery } from "./editorial-gallery";
+import { photos } from "@/lib/editorial-assets";
 export default function Home() {
   return (
     <>
+      <Entrance />
       <section className="hero">
-        <div className="hero-copy">
-          <p className="eyebrow">ALBANY, AUCKLAND · YOUR NEIGHBOURHOOD CAFÉ</p>
-          <Entrance />
-          <div className="hero-bottom">
+        <img
+          className="hero-image"
+          src={photos.hero}
+          alt="Fields Café and its open, welcoming setting in Albany"
+          fetchPriority="high"
+        />
+        <div className="hero-shade" />
+        <div className="hero-content">
+          <p className="eyebrow">A NEIGHBOURHOOD CAFÉ · ALBANY, NEW ZEALAND</p>
+          <h1>
+            Stay. <i>Play.</i>
+            <br />
+            Take away.
+          </h1>
+          <div className="hero-caption">
             <p>
               Good food. Open space.
-              <br />A place to make your own.
+              <br />
+              The pleasure of being here.
             </p>
-            <a className="button dark" href="/menu">
-              Explore the menu
+            <a className="text-link light" href="/menu">
+              Discover the menu
             </a>
           </div>
         </div>
-        <figure className="hero-photo">
-          <img
-            src="/assets/interior.webp"
-            alt="Sunlight falls across the open Fields Café interior"
-            fetchPriority="high"
-          />
-          <figcaption>Room for your everyday.</figcaption>
-        </figure>
-      </section>
-      <section className="intro section">
-        <p className="eyebrow">A LITTLE ROOM TO CONNECT</p>
-        <div>
-          <h2>
-            Come for coffee.
-            <br />
-            Stay for everything else.
-          </h2>
-          <p>
-            Long breakfasts. A catch-up that runs into lunch. A moment to
-            yourself. Fields brings fresh, generous food and a welcoming place
-            to the heart of Albany.
-          </p>
-          <a className="text-link" href="/about">
-            Meet your neighbourhood café
+        <div className="hero-base">
+          <span>4 APPIAN WAY, ALBANY</span>
+          <a href="#welcome">
+            SCROLL TO DISCOVER
+            <span className="scroll-line" aria-hidden="true" />
           </a>
+          <span>A NEIGHBOURHOOD CAFÉ BY OKLA</span>
         </div>
       </section>
-      <section className="food-grid section">
-        <div className="food-title">
-          <p className="eyebrow">FRESH THINKING. FAMILIAR PLEASURES.</p>
+      <section id="welcome" className="editorial-intro section">
+        <div className="section-index">01 / THE EVERYDAY, RECONSIDERED</div>
+        <div className="intro-grid">
           <h2>
-            Made for
+            A little space.
             <br />
-            your kind
-            <br />
-            of day.
+            <i>A slower pace.</i>
           </h2>
-          <p>
-            Inspired by many cultures, with simple, delicious flavours at the
-            centre.
-          </p>
-          <a className="button dark" href="/menu">
-            See what’s on the menu
-          </a>
+          <div className="intro-copy">
+            <p>
+              For the first coffee of the day. For a long lunch, a familiar
+              face, a moment that becomes an afternoon.
+            </p>
+            <p>
+              Fields is Albany’s neighbourhood café and eatery. Rooted in the
+              area’s fruit-growing past and inspired by the community around us,
+              we make room for good food and good company.
+            </p>
+            <a className="text-link" href="/about">
+              Fields and OKLA Livana
+            </a>
+          </div>
         </div>
-        <figure>
-          <img
-            src="/assets/savoury.webp"
-            alt="A colourful savoury plate photographed at Fields Café"
-            loading="lazy"
-          />
-          <figcaption>Something savoury.</figcaption>
-        </figure>
-        <figure className="offset">
-          <img
-            src="/assets/sweet.webp"
-            alt="A beautifully presented sweet plate with fruit at Fields Café"
-            loading="lazy"
-          />
-          <figcaption>A little sweetness.</figcaption>
-        </figure>
+        <div className="composition">
+          <figure className="composition-main">
+            <img
+              src={photos.dining}
+              alt="Light and open space inside Fields Café"
+              loading="lazy"
+            />
+            <figcaption>A place to settle in.</figcaption>
+          </figure>
+          <figure className="composition-detail">
+            <img
+              src={photos.detail}
+              alt="A Fields-branded cushion and natural material details inside the café"
+              loading="lazy"
+            />
+            <figcaption>The everyday, made a little better.</figcaption>
+          </figure>
+          <div className="composition-note">
+            <span className="fine-rule" />
+            <p>
+              Fresh is best.
+              <br />
+              Company makes it
+              <br />
+              <i>even better.</i>
+            </p>
+          </div>
+        </div>
       </section>
-      <section className="venue">
+      <section className="taste section">
+        <div className="section-index">02 / AT THE TABLE</div>
+        <div className="taste-heading">
+          <h2>
+            Simple pleasures.
+            <br />
+            <i>Beautifully made.</i>
+          </h2>
+          <div>
+            <p>
+              Real ingredients. Generous flavours. Food inspired by many
+              cultures, and determined by none.
+            </p>
+            <a className="text-link light" href="/menu">
+              Explore our café menu
+            </a>
+          </div>
+        </div>
+        <EditorialGallery
+          items={[
+            {
+              src: photos.breakfast,
+              alt: "A freshly prepared savoury plate at Fields Café",
+              label: "Make a morning of it.",
+            },
+            {
+              src: photos.sweet,
+              alt: "Fresh fruit and a sweet plate at Fields Café",
+              label: "A little indulgence.",
+            },
+            {
+              src: photos.pasta,
+              alt: "Pasta enjoyed at Fields Café",
+              label: "Good food, good company.",
+            },
+            {
+              src: photos.fruit,
+              alt: "A beautifully prepared Fields plate",
+              label: "Fresh flavours, familiar pleasures.",
+            },
+          ]}
+        />
+      </section>
+      <section className="gather-feature">
         <img
-          src="/assets/exterior.webp"
-          alt="Fields Café’s illuminated glass facade and outdoor deck at dusk"
+          src={photos.gathering}
+          alt="Fields Café offers a welcoming setting for gatherings"
           loading="lazy"
         />
-        <div>
-          <p className="eyebrow">GATHER AT FIELDS</p>
+        <div className="gather-card">
+          <p className="eyebrow">03 / A PLACE FOR YOUR PEOPLE</p>
           <h2>
-            A place for
+            Gather
             <br />
-            your people.
+            <i>beautifully.</i>
           </h2>
           <p>
-            From a shared lunch to something worth celebrating. Let’s make room
-            for your next gathering.
+            A team lunch. A family celebration. A long-overdue catch-up. Some
+            moments deserve a little more room.
           </p>
-          <a className="button cream" href="/events">
+          <a className="text-link" href="/events">
             Events & catering
           </a>
         </div>
       </section>
-      <section className="visit section">
-        <div>
-          <p className="eyebrow">WE’LL SAVE YOU A LITTLE SPACE</p>
-          <h2>
-            See you
-            <br />
-            at Fields.
-          </h2>
-          <a className="text-link" href="/booking">
-            Book your next visit
-          </a>
+      <section className="community section">
+        <div className="section-index">04 / A NEIGHBOURHOOD TAKING SHAPE</div>
+        <div className="community-grid">
+          <div>
+            <h2>
+              More than
+              <br />
+              <i>a meeting place.</i>
+            </h2>
+            <p>
+              A café today. A future community in mind. Discover the connection
+              between Fields and OKLA Livana, and the idea of belonging that
+              brings them together.
+            </p>
+            <a className="text-link" href="/about">
+              Fields and OKLA Livana
+            </a>
+          </div>
+          <figure>
+            <img
+              src={photos.render}
+              alt="Artist’s impression of the proposed OKLA Livana development"
+              loading="lazy"
+            />
+            <figcaption>
+              Artist’s impression of the proposed OKLA Livana development;
+              AI-enhanced presentation.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section className="little-editorial section">
+        <div className="little-pair">
+          <figure>
+            <img
+              src={photos.little}
+              alt="The distinct Little Fields kiosk inside the Auckland Council building"
+              loading="lazy"
+            />
+          </figure>
+          <figure>
+            <img
+              src={photos.littlePastry}
+              alt="A pastry photographed at Little Fields, 6 Munroe Lane"
+              loading="lazy"
+            />
+          </figure>
         </div>
         <div>
-          <h3>4 Appian Way, Albany</h3>
-          <p>Beside Hooton Reserve, Auckland.</p>
-          <dl>
-            <div>
-              <dt>Monday — Friday</dt>
-              <dd>7am — 3pm</dd>
-            </div>
-            <div>
-              <dt>Saturday — Sunday</dt>
-              <dd>8am — 4pm</dd>
-            </div>
-          </dl>
-          <p className="small">
-            Kitchen closes 2:10pm weekdays, 2:30pm weekends.
+          <p className="eyebrow">05 / A LITTLE DIFFERENT</p>
+          <h2>
+            A smaller ritual.
             <br />
-            Public holiday hours may vary. Call ahead to confirm.
+            <i>The same spirit.</i>
+          </h2>
+          <p>
+            Meet Little Fields. Your weekday coffee stop inside the Auckland
+            Council building at 6 Munroe Lane, with a neighbourhood welcome of
+            its own.
           </p>
-          <a className="text-link" href="tel:+6494145888">
-            09 414 5888
+          <a className="text-link" href="/little-fields">
+            Discover Little Fields
           </a>
         </div>
       </section>
-      <section className="little-promo section">
-        <img
-          src="/assets/little.webp"
-          alt="The Little Fields kiosk inside the Auckland Council building"
-          loading="lazy"
-        />
+      <section className="neighbourhood section">
+        <figure>
+          <img
+            src={photos.playground}
+            alt="The nearby neighbourhood playground with its red slide and climbing frames"
+            loading="lazy"
+          />
+          <figcaption>Nearby neighbourhood playground.</figcaption>
+        </figure>
         <div>
-          <p className="eyebrow">
-            SAME NEIGHBOURHOOD SPIRIT. A LITTLE DIFFERENT.
-          </p>
+          <p className="eyebrow">STAY A LITTLE. PLAY A LITTLE.</p>
           <h2>
-            Hello,
+            Make room
             <br />
-            Little Fields.
+            <i>for the whole day.</i>
           </h2>
           <p>
-            Your coffee stop at 6 Munroe Lane, inside the Auckland Council
-            building.
+            A family breakfast, a little fresh air, and a chance to play nearby.
+            There’s more than one way to make yourself at home in the
+            neighbourhood.
           </p>
-          <a className="button dark" href="/little-fields">
-            Meet Little Fields
-          </a>
         </div>
+      </section>
+      <section className="visit-banner">
+        <p className="eyebrow">THERE’S A PLACE FOR YOU HERE</p>
+        <h2>
+          Shall we
+          <br />
+          <i>make a day of it?</i>
+        </h2>
+        <a className="button dark" href="/booking">
+          Book a table
+        </a>
+        <a
+          className="quiet-link"
+          href="https://www.google.com/maps/search/?api=1&query=Fields+Cafe+4+Appian+Way+Albany"
+        >
+          Find us at 4 Appian Way
+        </a>
       </section>
     </>
   );
